@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group = 'cn.idugou'
+group = 'com.github.bizlog'
 version = '1.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 

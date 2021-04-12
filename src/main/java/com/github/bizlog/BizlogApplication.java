@@ -1,4 +1,4 @@
-package cn.idugou.bizlog;
+package com.github.bizlog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
