@@ -1,4 +1,4 @@
-package com.github.bizlog;
+package cn.idugou.bizlog;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
