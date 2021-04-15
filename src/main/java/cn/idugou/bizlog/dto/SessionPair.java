@@ -5,11 +5,11 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @Author : hejun
- * @Create : 2020/10/19 11:49
- * @Version : 1.0.1
- * @Copyright : Copyright (c) 2020
- * @Description :
+ * @Author: hejun
+ * @Create: 2021/4/12 14:23
+ * @Version: 1.0.1
+ * @Copyright: Copyright (c) 2021
+ * @Description:
  */
 @Data
 public class SessionPair implements Serializable {

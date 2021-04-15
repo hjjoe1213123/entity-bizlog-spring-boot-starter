@@ -5,11 +5,11 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @Author : hejun
- * @Create : 2020/10/12 16:25
- * @Version : 1.0.1
- * @Copyright : Copyright (c) 2020
- * @Description : 字段对象
+ * @Author: hejun
+ * @Create: 2021/4/12 14:23
+ * @Version: 1.0.1
+ * @Copyright: Copyright (c) 2021
+ * @Description:
  */
 @Data
 public class ColumnLogDTO implements Serializable {

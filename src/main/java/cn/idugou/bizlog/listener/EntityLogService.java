@@ -28,12 +28,11 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @Author : hejun
- * @Create : 2020/10/14 15:55
- * @Version : 1.0.1
- * @Copyright : Copyright (c) 2020
- * @Company : Pflm.cd
- * @Description :
+ * @Author: hejun
+ * @Create: 2021/4/12 14:23
+ * @Version: 1.0.1
+ * @Copyright: Copyright (c) 2021
+ * @Description:
  */
 public class EntityLogService {
 

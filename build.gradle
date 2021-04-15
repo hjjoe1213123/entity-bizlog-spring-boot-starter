@@ -2,11 +2,32 @@ plugins {
     id 'org.springframework.boot' version '2.3.7.RELEASE'
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     id 'java'
+    id 'maven'
+    id 'signing'
 }
 
 group = 'cn.idugou.bizlog'
-version = '1.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+archivesBaseName = "entity-bizlog-spring-boot-starter"
+version = '1.0.1'
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+artifacts {
+    archives sourcesJar
+}
+
+signing {
+    sign configurations.archives
+}
 
 configurations {
     compileOnly {
@@ -32,6 +53,47 @@ dependencies {
     }
 }
 
-test {
-    useJUnitPlatform()
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+            repository(url: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            snapshotRepository(url: "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
+                authentication(userName: ossrhUsername, password: ossrhPassword)
+            }
+
+            pom.project {
+                name 'entity-bizlog-spring-boot-starter'
+                packaging 'jar'
+                // optionally artifactId can be defined here
+                description '一个OLTP数据库JPA日志拦截记录的springboot框架'
+                url 'https://github.com/hjjoe1213123/entity-bizlog-spring-boot-starter'
+
+                scm {
+                    connection = 'scm:git:git://github.com/hjjoe1213123/entity-bizlog-spring-boot-starter.git'
+                    developerConnection = 'scm:git:ssh://github.com/hjjoe1213123/entity-bizlog-spring-boot-starter.git'
+                    url = 'https://github.com/hjjoe1213123/entity-bizlog-spring-boot-starter'
+                }
+
+                licenses {
+                    license {
+                        name 'MIT License'
+                        url 'http://www.opensource.org/licenses/mit-license.php'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'hjjoe'
+                        name 'hjjoe'
+                        email 'hjjoe1213123@163.com'
+                    }
+                }
+            }
+        }
+    }
 }

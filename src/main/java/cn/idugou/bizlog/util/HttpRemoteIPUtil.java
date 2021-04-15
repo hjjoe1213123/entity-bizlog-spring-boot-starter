@@ -7,11 +7,11 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 /**
- * @Author : hejun
- * @Create : 2020/12/21 9:55
- * @Version : 1.0.1
- * @Copyright : Copyright (c) 2020
- * @Description : IP 获取Util
+ * @Author: hejun
+ * @Create: 2021/4/12 14:23
+ * @Version: 1.0.1
+ * @Copyright: Copyright (c) 2021
+ * @Description:
  */
 public class HttpRemoteIPUtil {
 

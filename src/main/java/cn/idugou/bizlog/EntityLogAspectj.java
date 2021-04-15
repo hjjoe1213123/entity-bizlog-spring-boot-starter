@@ -17,11 +17,11 @@ import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 
 /**
- * @Author : hejun
- * @Create : 2020/10/14 15:26
- * @Version : 1.0.1
- * @Copyright : Copyright (c) 2020
- * @Description :
+ * @Author: hejun
+ * @Create: 2021/4/12 14:23
+ * @Version: 1.0.1
+ * @Copyright: Copyright (c) 2021
+ * @Description:
  */
 @Aspect
 public class EntityLogAspectj implements Ordered {

@@ -10,11 +10,11 @@ import static java.lang.annotation.ElementType.METHOD;
 
 
 /**
- * @Author :hejun
- * @Create ：2021/4/12 16:19
- * @Version ：1.0.1
- * @Copyright : Copyright (c) 2021
- * @Description :
+ * @Author: hejun
+ * @Create: 2021/4/12 14:23
+ * @Version: 1.0.1
+ * @Copyright: Copyright (c) 2021
+ * @Description:
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(value = { FIELD, METHOD, ANNOTATION_TYPE })

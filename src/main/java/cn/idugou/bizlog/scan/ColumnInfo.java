@@ -5,11 +5,11 @@ import lombok.Data;
 import java.lang.reflect.Field;
 
 /**
- * @Author : hejun
- * @Create : 2020/10/14 15:13
- * @Version : 1.0.1
- * @Copyright : Copyright (c) 2020
- * @Description :
+ * @Author: hejun
+ * @Create: 2021/4/12 14:23
+ * @Version: 1.0.1
+ * @Copyright: Copyright (c) 2021
+ * @Description:
  */
 @Data
 public class ColumnInfo {

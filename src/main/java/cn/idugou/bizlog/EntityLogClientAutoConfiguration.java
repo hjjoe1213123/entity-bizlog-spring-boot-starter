@@ -5,11 +5,11 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @Author : hejun
- * @Create : 2020/10/15 11:22
- * @Version : 1.0.1
- * @Copyright : Copyright (c) 2020
- * @Description :
+ * @Author: hejun
+ * @Create: 2021/4/12 14:23
+ * @Version: 1.0.1
+ * @Copyright: Copyright (c) 2021
+ * @Description:
  */
 @Configuration
 @EnableConfigurationProperties({EntityLogProperties.class})
