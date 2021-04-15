@@ -50,6 +50,7 @@ public class EntityLogService {
 
 
     public <T> void saveEntityLog(Class<T> clz, EntityLogDTO entityLogDTO) {
+        log.info(entityLogDTO.toString());
 //        rabbitTemplate.convertAndSend("", entityLogProperties.getQueueName(), entityLogDTO, message -> {
 //            message.getMessageProperties().setHeader("rowId", entityLogDTO.getRowId());
 //            message.getMessageProperties().setHeader("sessionId", entityLogDTO.getSessionId());
