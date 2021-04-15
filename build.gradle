@@ -25,6 +25,10 @@ artifacts {
     archives sourcesJar
 }
 
+jar {
+    enabled = true
+}
+
 signing {
     sign configurations.archives
 }
