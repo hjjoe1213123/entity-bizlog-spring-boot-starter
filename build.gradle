@@ -17,16 +17,30 @@ task sourcesJar(type: Jar) {
     from sourceSets.main.allSource
 }
 
+task javadocJar(type: Jar) {
+    from javadoc
+    classifier = 'javadoc'
+}
+
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
 }
 
 artifacts {
+    archives javadocJar
     archives sourcesJar
 }
 
 jar {
     enabled = true
+}
+
+javadoc {
+    options{
+        encoding "UTF-8"
+        charSet 'UTF-8'
+        tags = [ "Author","Create","Version","Copyright","Description" ]
+    }
 }
 
 signing {
