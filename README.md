@@ -4,12 +4,19 @@
 
 # 开发计划
 
-2021/04/15  1.0.1 实现日式文件打印变更 --已实现
-2021/05/05  1.0.2 实现NoSQL数据库存储变更记录 --实现中
+1. 2021/04/15  1.0.1 实现日式文件打印变更 --已实现
+2. 2021/05/05  1.0.2 实现NoSQL数据库存储变更记录 --实现中
 
 #快速开始
-
-### 1、实体类添加相应注解
+### 1、pom添加
+```xml
+<dependency>
+  <groupId>cn.idugou.bizlog</groupId>
+  <artifactId>entity-bizlog-spring-boot-starter</artifactId>
+  <version>1.0.1</version>
+</dependency>
+```
+### 2、实体类添加相应注解
 ````java
 @Data
 @Accessors(chain = true)
@@ -38,7 +45,7 @@ public class SmsTopicUser implements Serializable {
     private String queueCode;
 }
 ````
-### 2、操作方法添加注解
+### 3、操作方法添加注解
 ````java
 @Service
 public class SmsTopicUserServiceImpl implements SmsTopicUserService {
@@ -59,7 +66,7 @@ public class SmsTopicUserServiceImpl implements SmsTopicUserService {
 }
 ````
 
-### 3、启动类添加注解
+### 4、启动类添加注解
 ````java
 @EnableJpaRepositories(basePackages = {"com.example.bizlogtest.dao"}) //必要
 @EntityScan(basePackages = {"com.example.bizlogtest.entity"}) //必要
